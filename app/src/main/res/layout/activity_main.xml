@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0a0a0c">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        android:textColor="#e8e8f0"
+        android:textSize="72sp"
+        android:fontFamily="sans-serif-light"
+        android:text="00:00"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTime"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#88888f"
+        android:textSize="13sp"
+        android:letterSpacing="0.2"
+        android:text="ПОНЕДЕЛЬНИК, 1 ЯНВАРЯ"/>
+
+    <LinearLayout
+        android:id="@+id/weatherCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDate"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="24dp"
+        android:background="#141418"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvWeatherIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="🌤"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#7eb8f7"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-light"
+                android:text="+14°"/>
+
+            <TextView
+                android:id="@+id/tvWeatherDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#88888f"
+                android:textSize="12sp"
+                android:text="Переменная облачность"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#88888f"
+            android:textSize="12sp"
+            android:text="МОЙ ГОРОД"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/appGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherCard"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:numColumns="4"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="16dp"/>
+
+</RelativeLayout>
